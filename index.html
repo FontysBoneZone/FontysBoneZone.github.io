@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body style="background-color:rgb(27, 23, 23);"></body>> 
- 
+
 
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=960 height=600></canvas>
@@ -20,7 +20,7 @@
       </div>
       <div id="unity-warning"> </div>
       <div id="unity-footer">
-       
+
         <div id="unity-fullscreen-button"></div>
         <div id="unity-build-title">Fontys Bottenzicht</div>
       </div>
@@ -60,9 +60,9 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/build.loader.js";
       var config = {
-        dataUrl: buildUrl + "/build.data",
-        frameworkUrl: buildUrl + "/build.framework.js",
-        codeUrl: buildUrl + "/build.wasm",
+        dataUrl: buildUrl + "/build.data.gz",
+        frameworkUrl: buildUrl + "/build.framework.js.gz",
+        codeUrl: buildUrl + "/build.wasm.gz",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Fontys Bottenzicht",
@@ -96,9 +96,6 @@
         unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-
-       // canvas.style.width = "960px";
-       // canvas.style.height = "600px";
 
         canvas.style.width = "1440px";
         canvas.style.height = "810px";
