@@ -95,7 +95,10 @@
       //  canvas.style.height = window.innerHeight + 'px'; 
      canvas.style.height = "90vh";
       
-      
+      if(/iPhone/i.test(navigator.useragent)){
+        console.log("im a iphone user");
+        canvas.style.height = "80vh";
+      }
       
    
 
