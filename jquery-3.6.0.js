@@ -5431,7 +5431,8 @@ jQuery.event = {
 
 					if ( ret !== undefined ) {
 						if ( ( event.result = ret ) === false ) {
-							event.preventDefault();
+							//event.preventDefault();
+							if (event.cancelable) event.preventDefault();
 							event.stopPropagation();
 						}
 					}
@@ -5656,7 +5657,8 @@ function leverageNative( el, type, expectSync ) {
 
 						// Cancel the outer synthetic event
 						event.stopImmediatePropagation();
-						event.preventDefault();
+					//	event.preventDefault();
+					if (event.cancelable) event.preventDefault();
 
 						// Support: Chrome 86+
 						// In Chrome, if an element having a focusout handler is blurred by
@@ -8724,7 +8726,8 @@ jQuery.extend( jQuery.event, {
 			if ( handle && handle.apply && acceptData( cur ) ) {
 				event.result = handle.apply( cur, data );
 				if ( event.result === false ) {
-					event.preventDefault();
+					//event.preventDefault();
+					if (event.cancelable) event.preventDefault();
 				}
 			}
 		}
